@@ -5,13 +5,13 @@ import akash from '../../assets/akash1.jpeg'
 import { FaGithub, FaLinkedin, FaDiscord, FaEnvelope } from 'react-icons/fa'; 
 
 
-function Home() {
+function Home({ darkMode }) {
   const name = "Hello, my name is";
   
   return (
     <Container className="hello-container">
-        <Card className='bg-transparent border-0'>
-            <Card.Body>
+        <Card className={`bg-transparent border-0 ${darkMode ? 'dark-mode' : ''}`}>
+            <Card.Body className='text_hi '>
                 <h4>
                     {name.split('').map((letter, index) => (
                         <span key={index} className="fly-in" style={{ animationDelay: `${index * 0.05}s` }}>

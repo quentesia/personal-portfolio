@@ -1,10 +1,11 @@
-import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState } from 'react'; // Import useState
+import { Navbar, Nav, Container, Button } from 'react-bootstrap';
+import './intro.css';
 
-function Header() {
+function Header({ toggleDarkMode, darkMode }) {
+
   return (
-    <Navbar expand="lg" className="bg-body-tertiary fixed-top justify-content-end"> 
+    <Navbar expand="lg" className={`bg-body-tertiary fixed-top justify-content-end ${darkMode ? 'dark' : ''}`}>
       <Container className='ms-auto'>
         <Navbar.Brand href="#home">Akash</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -14,8 +15,11 @@ function Header() {
             <Nav.Link href="#link">About</Nav.Link>
             <Nav.Link href="#skills">Skills</Nav.Link>
             <Nav.Link href="#projects">Projects</Nav.Link>
-            <Nav.Link href ="#Contact">Contact</Nav.Link>
+            <Nav.Link href="#Contact">Contact</Nav.Link>
           </Nav>
+          <Button onClick={toggleDarkMode} className="ms-3">
+            {darkMode ? 'Light Mode' : 'Dark Mode'}
+          </Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

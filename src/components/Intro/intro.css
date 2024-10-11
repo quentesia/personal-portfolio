@@ -1,0 +1,4 @@
+.dark {
+    --bs-body-bg: #121212; /* Set the background color for dark mode */
+    color: #ffffff; /* Light text color */
+}

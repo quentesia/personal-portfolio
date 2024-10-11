@@ -9,6 +9,15 @@
     align-items: center; 
 }
 
+.text_hi h4, .text_hi h1, .text_hi p {
+    color: black;
+}
+
+.dark-mode .text_hi h4, .dark-mode .text_hi h1, .dark-mode .text_hi p {
+    color: white;
+}
+
+
 .akash-image {
     width: 300px;      
     height: 400px;     
@@ -28,6 +37,10 @@
 .social-icons a {
     color: #000;
     text-decoration: none; 
+}
+
+.dark .social-icons a {
+    color: white;
 }
 
 .social-icons a:hover {
